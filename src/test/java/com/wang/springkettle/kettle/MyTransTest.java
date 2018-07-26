@@ -13,11 +13,11 @@ public class MyTransTest {
 
     @Test
     public void runTrans() {
-        myTrans.runTrans(params,"C:/Users/wang/Desktop/test.ktr");
+        myTrans.runTrans(params, "C:/Users/wang/Desktop/test.ktr");
     }
 
     @Test
     public void runJob() {
-        myTrans.runJob(params,"C:/Users/wang/Desktop/test.kjb");
+        myTrans.runJob(params, "C:/Users/wang/Desktop/test.kjb");
     }
 }
