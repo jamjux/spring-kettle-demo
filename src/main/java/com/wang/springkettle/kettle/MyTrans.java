@@ -59,14 +59,14 @@ public class MyTrans {
             // job.setVariable(paraname, paravalue);
             //job.setVariable("no", "13");
             job.setVariable("max", "100");
-            //添加命名参数定义，之后才能设置命名参数值
+            //添加命名参数定义
             //job.addParameterDefinition("no", "13", "excel记录数");
             //job.addParameterDefinition("xu", "13", "测试用");
             //job.setParameterValue("no", "11");
             //job.setParameterValue("xu", "11");
             jobMeta.setParameterValue("no","32");
-            //jobMeta.setInternalKettleVariables(job);
-            //jobMeta.activateParameters();
+            jobMeta.setInternalKettleVariables(job);
+            jobMeta.activateParameters();
 
 
 
