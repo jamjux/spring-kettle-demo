@@ -2,8 +2,6 @@ package com.wang.springkettle.kettle;
 
 import org.pentaho.di.core.KettleEnvironment;
 import org.pentaho.di.core.util.EnvUtil;
-import org.pentaho.di.job.Job;
-import org.pentaho.di.job.JobMeta;
 import org.pentaho.di.trans.Trans;
 import org.pentaho.di.trans.TransMeta;
 
