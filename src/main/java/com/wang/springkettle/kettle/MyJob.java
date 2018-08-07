@@ -12,10 +12,10 @@ public class MyJob {
     /**
      * @param params  传递参数
      * @param jobPath job文件路径
-     * @param map 命名参数
-     * @param mesg 运行结果变量名
+     * @param map     命名参数
+     * @param mesg    运行结果变量名
      */
-    public void runJob(String[] params, String jobPath, Map<String,String> map ,List<String> mesg) {
+    public void runJob(String[] params, String jobPath, Map<String, String> map, List<String> mesg) {
         try {
             KettleEnvironment.init();
             EnvUtil.environmentInit();
@@ -24,8 +24,8 @@ public class MyJob {
             Job job = new Job(null, jobMeta);
 
             //设置命名参数
-            for (String key: map.keySet()) {
-                jobMeta.setParameterValue(key,map.get(key));
+            for (String key : map.keySet()) {
+                jobMeta.setParameterValue(key, map.get(key));
             }
             jobMeta.setInternalKettleVariables(job);
             jobMeta.activateParameters();
@@ -35,9 +35,9 @@ public class MyJob {
             job.waitUntilFinished();
 
             //获得转换运行结果变量
-            for (String m:mesg) {
+            for (String m : mesg) {
                 String message = job.getVariable(m);
-                System.out.println(m+" : "+ (message != null ? "success" : "failure"));
+                System.out.println(m + " : " + (message != null ? "success" : "failure"));
             }
 
             if (job.getErrors() > 0) {
