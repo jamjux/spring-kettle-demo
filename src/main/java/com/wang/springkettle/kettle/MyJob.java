@@ -9,13 +9,14 @@ import java.util.List;
 import java.util.Map;
 
 public class MyJob {
+
     /**
      * @param params  传递参数
      * @param jobPath job文件路径
      * @param map     命名参数
-     * @param mesg    运行结果变量名
+     * @param varName    运行结果变量名
      */
-    public void runJob(String[] params, String jobPath, Map<String, String> map, List<String> mesg) {
+    public void runJob(String[] params, String jobPath, Map<String, String> map, List<String> varName) {
         try {
             KettleEnvironment.init();
             EnvUtil.environmentInit();
@@ -35,9 +36,9 @@ public class MyJob {
             job.waitUntilFinished();
 
             //获得转换运行结果变量
-            for (String m : mesg) {
-                String message = job.getVariable(m);
-                System.out.println(m + " : " + (message != null ? "success" : "failure"));
+            for (String vn : varName) {
+                String message = job.getVariable(vn);
+                System.out.println(vn + " : " + (message != null ? "success" : "failure"));
             }
 
             if (job.getErrors() > 0) {

@@ -9,9 +9,9 @@ import java.util.Map;
 
 public class MyJobTest {
     private MyJob myJob = new MyJob();
-    String[] params = {};
-    Map<String,String> map = new HashMap<>();
-    List<String> mesg = new ArrayList<>();
+    private String[] params = {};
+    private Map<String,String> map = new HashMap<>();
+    private List<String> mesg = new ArrayList<>();
 
     @Test
     public void runJob() {
