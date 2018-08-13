@@ -38,7 +38,7 @@ public class MyJob {
             //获得转换运行结果变量
             for (String vn : varName) {
                 String message = job.getVariable(vn);
-                System.out.println(vn + " : " + (message != null ? "success" : "failure"));
+                System.out.println(vn + " : " + ("true".equals(message) ? "success" : "failure"));
             }
 
             if (job.getErrors() > 0) {

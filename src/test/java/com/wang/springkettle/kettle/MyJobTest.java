@@ -28,7 +28,7 @@ public class MyJobTest {
         mesg.add("myFileStatusCheck");  //文件状态
         mesg.add("myFileTypeCheck");    //文件后缀
         mesg.add("dataIntegrity");      //文件完整性
-        mesg.add("myFileFieldCheck");   //字段信息
+        mesg.add("fieldCheckResult");   //字段信息
 
 
         myJob.runJob(params,jobPath,map,mesg);
