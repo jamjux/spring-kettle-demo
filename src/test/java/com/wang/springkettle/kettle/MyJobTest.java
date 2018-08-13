@@ -18,7 +18,8 @@ public class MyJobTest {
         String jobPath ="C:/Users/wang/Desktop/模块练习资料/importData.kjb";
 
         map.put("filepath","C:/Users/wang/Desktop/模块练习资料/");
-        map.put("filename","适用微信公众号、APP支付报表.csvx");
+        //map.put("filename","适用微信公众号、APP支付报表.csv");
+        map.put("filename","适用微信公众号、APP支付报表、pass.csv");
         map.put("hostname","127.0.0.1");
         map.put("dbname","kettle_exercise1");
         map.put("port","3306");
@@ -27,7 +28,7 @@ public class MyJobTest {
 
         map.put("currencyCode","CNY");  //货币代码
         map.put("pap","TPAY");           //支付商代码
-        map.put("toleranceValue","100");//容忍值
+        map.put("toleranceValue","500");//容忍值
 
         mesg.add("fileStatusCheck");  //文件状态
         mesg.add("fileTypeCheck");    //文件后缀
